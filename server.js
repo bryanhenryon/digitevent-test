@@ -3,13 +3,12 @@ const numbersApiRouter = require("./routes/numbersapi");
 const app = express();
 var cors = require('cors')
 
-app.use(cors())
+app.use(cors());
 app.use(express.json());
-// sert les fichiers statiques 
 app.use(express.static(__dirname + '/public/'));
 app.use(numbersApiRouter);
 
-// Renvoit toutes les pages à l'index du client
+// Renvoie toutes les requêtes à Vue
 app.get(/.*/, (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
 });

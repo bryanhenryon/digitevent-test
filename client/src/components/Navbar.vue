@@ -19,10 +19,11 @@ export default {};
   margin: 0 auto;
 
   a {
-    color: inherit;
+    color: #fff;
+    text-decoration: none;
 
     &:hover {
-      color: #79ad80;
+      text-decoration: underline;
     }
   }
 }
